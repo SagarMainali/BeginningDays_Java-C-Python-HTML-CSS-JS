@@ -1,5 +1,4 @@
-
-//I just had to use gender.equals(""),,,,so....
+//finding gender lol not really
 import java.util.Scanner;
 
 public class Gender {
@@ -10,7 +9,7 @@ public class Gender {
     String gender = input.nextLine();
     input.close();
     if (gender.equals("boy")) {
-      System.out.println("Sorry, you are male.");
+      System.out.println("lol, you are male.");
     }
     if (gender.equals("girl")) {
       System.out.println("Congratulations, you are female.");
