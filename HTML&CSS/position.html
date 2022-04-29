@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+</head>
+<body>
+    <div class="container">
+        <div class="relative">This is a relative div</div>
+        <div class="absolute">This is an absolute div</div>
+        <div class="normal">This is a normal div</div>
+    </div>
+</body>
+<style>
+    *{
+        margin: o;
+        padding: 0;
+    }
+    body{
+        border: 2px solid green;
+    }
+    .container{
+        border: 2px solid purple;
+        border-radius: 10px;
+        text-align: center;
+        padding: 20px;
+    }
+    .relative, .absolute, .normal{
+        border: 2px solid orange;
+        border-radius: 10px;
+        margin: 10px;
+    }
+    .relative{
+        position: relative;
+    }
+    .absolute{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+</style>
+</html>

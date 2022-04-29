@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("del.jpg");
+    background-attachment: fixed;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    /* font-family:'Courier New', Courier, monospace;
+    the box expands affecting the item next to it*/ 
+    color: green;
+}
+
+.heading{
+    text-align: center;
+    margin-top: 5%;
+    background-color: aliceblue;
+    margin: 10px 90px;
+}
+
+.flex-container-1, .flex-container-2, .flex-container-3, .flex-container-4{
+    background-color: aquamarine;
+    display:flex;
+    justify-content: space-around;
+    margin: 10px 150px; /* for the flex container */
+}
+
+#first, #second, #third, #fourth, #fifth, #sixth, #seventh, #eighth{
+    background-color:azure ;
+    padding: 40px;
+    margin: 10px auto; /* for content inside the flex container */
+}
+
+.footer{
+    display: flex;
+    background-color: aliceblue;
+    justify-content: center; /*this won't work because the flex direction is column*/
+    align-items: center; /*this works since the flex direction is not in row*/
+    flex-direction: column;
+    margin: 2% 90px;
+    padding: 1% 0;
+
+}
+
+@media (max-width: 800px) { /* this media query converts flex-containers rows into columns */
+    .flex-container-1, .flex-container-2, .flex-container-3, .flex-container-4{
+      flex-direction: column;
+    }
+}

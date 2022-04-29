@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borders</title>
+    <style>
+        body {
+            background: rgb(0, 255, 255);
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            width: 100px;
+            border: 20px solid rebeccapurple;
+            border-bottom: 0;
+            border-radius: 70px 70px 0 0; /*70px because the total height includes the borders as well*/
+            /*when using 'px' units rather than '%' using the toal height of the element gives semi-circular shape*/
+        }
+    </style>
+</head>
+
+<body>
+    <div>------------------</div>
+</body>
+
+</html>

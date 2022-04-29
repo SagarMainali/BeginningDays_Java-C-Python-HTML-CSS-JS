@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="first">
+            <h1>EMS</h1>
+            <p>hello i am practicing ems today</p>
+        </div>
+    </div>
+</body>
+<style>
+    *{
+        margin: 10px;
+        padding: 0;
+    }
+    html{
+        border: 2px solid yellowgreen;
+    }
+    body{
+        border: 2px solid black;
+    }
+    .container{ /*8px*/
+        font-size: .5em;
+        border: 2px solid red;
+    }
+    .first{ /*16px*/
+        font-size: 2em;
+        border: 2px solid green;
+    }
+    h1, p{ /*32px*/
+        font-size: 2em;
+        margin: 1em; /*32px - refers to the font-size of its current div */
+        padding: 1em; /*32px - refers to the font-size of its current div */
+        border: 2px solid pink;
+    }
+    @media screen and (max-width: 750px){
+        h1, p{
+            font-size: 1em;
+        }
+    }
+</style>
+</html>
