@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>noodling around</title>
+    <style>
+        .flex_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .flex {
+            height: 300px;
+            width: 300px;
+            background: rgb(50, 100, 150);
+            margin: 0 20px;
+            transition: ease-in .1s;
+            position: relative;
+            border-radius: 20px;
+        }
+        
+        img {
+            display: none;
+            color: snow;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        span {
+            display: none;
+            color: white;
+            font-size: 20px;
+            font-family: cursive;
+            position: absolute;
+            top: 84%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+        }
+        
+        .flex:hover {
+            transform: scale(1.07);
+            background: rgba(0, 0, 0, 0.8);
+            cursor: pointer;
+        }
+
+        .flex:hover img {
+            display: block;
+        }
+
+        .flex:hover span {
+            display: block;
+        }
+        
+        @media screen and (max-width:900px) {
+            .flex_container {
+                flex-direction: column;
+            }
+
+            .flex {
+                margin: 20px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex_container">
+        <div class="flex">
+            <img src="landscape.jpg" alt="photo here" style: width="100%"">
+            <span>Nature</span>
+        </div>
+        <div class=" flex">
+            <img src="landscape.jpg" alt="photo here" style: width="100%"">
+            <span>Nature</span>
+        </div>
+        <div class=" flex">
+            <img src="landscape.jpg" alt="photo here" style: width="100%"">
+            <span>Nature</span>
+        </div>
+    </div>
+</body>
+
+</html>

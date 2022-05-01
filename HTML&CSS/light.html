@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>light</title>
+    <style>
+        body {
+            height: 97.5vh;
+            background: skyblue;
+            position: relative;
+        }
+
+        .light {
+            background: rgb(187, 179, 179);
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: inset 30px 20px 60px rgb(156, 153, 153),
+                inset -30px -20px 60px rgb(149, 144, 144);
+        }
+
+        .holder {
+            background: gray;
+            position: absolute;
+            height: 160px;
+            width: 25px;
+            border-radius: 10px 10px 0 0;
+            top: 65.5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .state1,
+        .state2 {
+            position: absolute;
+            top: 180%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: cursive;
+            color: gray;
+            font-weight: bold;
+        }
+
+        .state2 {
+            display: none;
+        }
+
+        .light:hover {
+            background: white;
+            cursor: pointer;
+            box-shadow: 3px 3px 20px white,
+                -3px -3px 20px white;
+        }
+
+        .light:hover .state2 {
+            display: block;
+        }
+
+        .light:hover .state1 {
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="light">
+        <div class="state1">OFF</div>
+        <div class="state2">ON</div>
+    </div>
+    <div class="holder"></div>
+</body>
+</html>
