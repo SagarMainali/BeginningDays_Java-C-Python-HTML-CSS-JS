@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Todo List</title>
+     <script src="https://kit.fontawesome.com/696c0e8be2.js" crossorigin="anonymous"></script>
+
+     <style>
+          body {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               justify-content: center;
+               height: 100vh;
+          }
+
+          i {
+               font-size: 14px;
+               cursor: pointer;
+               position: relative;
+               left: 10px;
+          }
+     </style>
+</head>
+
+<body>
+     <h2>Add, remove and clear todo list.</h2>
+     <div id="todoList">
+          <p>My first list(default)</p>
+          <p>My second list(default)</p>
+     </div>
+     <div>
+          <input type="text" id="newTodo">
+          <button onclick="addList()">Add List</button>
+          <br>
+          <br>
+          <button onclick="clearList()">Clear List</button>
+     </div>
+
+     <script>
+          function addList() {
+               const newTodo = document.getElementById("newTodo"); // select input field
+               if (newTodo.value == '') { // if the field is empty
+                    return alert("Dude seriously?? The field is empty.");
+               }
+               else {
+                    const newElement_p = document.createElement("p"); // add new element p
+                    const newElement_i = document.createElement("i"); // add new element i
+                    newElement_i.classList.add("fa-solid", "fa-xmark"); // adding class names to i element 
+                    newElement_p.innerHTML = newTodo.value; // add value of input field to newly created p
+                    newElement_p.appendChild(newElement_i); // appending the newlly created i element into the p element right after it stores the value from input field
+                    document.getElementById("todoList").appendChild(newElement_p); // add the new p to the div as a child
+                    newTodo.value = ''; // clear input field
+                    newElement_i.addEventListener("click", function () { // adding click eventlistener and executing its function
+                         newElement_p.remove(); // remove newly added p element
+                    }
+                    );
+               }
+          }
+
+          function clearList() {
+               const todoList = document.getElementById("todoList"); // select the list
+               if (todoList.hasChildNodes()) { // if the todoList has child
+                    while (todoList.hasChildNodes()) { // until todoList has child
+                         todoList.removeChild(todoList.firstChild); // keep removing the first child
+                    }
+               }
+               else {
+                    alert("Comeeeeeee onnnnnn! The list is already empty you moron!");
+               }
+          }
+
+     </script>
+</body>
+
+</html>

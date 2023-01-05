@@ -1,0 +1,36 @@
+<!-- this program adds a font awesome icon to an existing p tag -->
+<!-- this is useful when appending new element that has pre defined class name -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <script src="https://kit.fontawesome.com/696c0e8be2.js" crossorigin="anonymous"></script>
+     <style>
+          i{
+               position: relative;
+               left: 5px;
+               font-size: 14px;
+          }
+     </style>
+</head>
+
+<body>
+     <!-- <i class="fa-solid fa-xmark"></i> -->
+     <p id="helloworld">Hello World</p>
+     <button onclick="addIcon()">Add Icon</button>
+     <script>
+          function addIcon() {
+               const icon = document.createElement("i"); //creating 'i' element
+               icon.classList.add("fa-solid", "fa-xmark"); //adding two class name to 'i' element
+               const helloworld = document.getElementById("helloworld"); //selecting the element with 'helloworld' id 
+               helloworld.appendChild(icon); //adding the newly created 'i' element to the element having 'helloworld' id
+          }
+     </script>
+</body>
+
+</html>
