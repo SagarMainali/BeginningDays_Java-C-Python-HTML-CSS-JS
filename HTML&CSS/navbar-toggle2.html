@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Responsive Navbar 2</title>
+     <script src="https://kit.fontawesome.com/696c0e8be2.js" crossorigin="anonymous"></script>
+     <style>
+          * {
+               box-sizing: border-box;
+               margin: 0;
+               padding: 0;
+               font-family: sans-serif;
+               color: white
+          }
+
+          .logo {
+               font-weight: bold;
+          }
+
+          a {
+               text-decoration: none;
+               margin-right: 20px;
+          }
+
+          nav {
+               margin: 10px 12px;
+               padding: 20px 40px;
+               background-color: darkslategrey;
+               border-radius: 6px;
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               height: 60px;
+               position: relative;
+          }
+
+          i {
+               display: none !important;
+               cursor: pointer;
+          }
+
+          @media all and (max-width: 700px) {
+               i {
+                    display: block !important;
+               }
+
+               #links {
+                    display: none;
+               }
+
+               .change {
+                    display: flex !important;
+                    flex-direction: column;
+                    position: absolute;
+                    background-color: darkslategrey;
+                    top: 62px;
+                    left: 0;
+                    right: 0;
+                    padding: 20px 40px 0;
+                    border-radius: 0 0 8px 8px;
+               }
+
+               .nav-radius {
+                    border-radius: 6px 6px 0 0;
+               }
+
+               a {
+                    margin-bottom: 20px;
+               }
+
+               .rotate {
+                    transform: rotate(90deg);
+                    transition: 0.2s ease-in-out;
+               }
+          }
+
+     </style>
+</head>
+
+<body>
+     <nav>
+          <div class="logo">
+               <span>
+                    FANCY.
+               </span>
+          </div>
+          <div id="links">
+               <a href="">Home</a>
+               <a href="">Price</a>
+               <a href="">Service</a>
+               <a href="">About</a>
+          </div>
+          <i class="fa-solid fa-bars" id="toggle-menu" onclick="openMenu()"></i>
+     </nav>
+
+     <script>
+          function openMenu() {
+               document.getElementById("links").classList.toggle("change");
+               document.querySelector("nav").classList.toggle("nav-radius");
+               document.querySelector("i").classList.toggle("rotate");
+          }
+     </script>
+</body>
+
+</html>

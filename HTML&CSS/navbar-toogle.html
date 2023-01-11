@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Responsive Navbar 1</title>
+     <script src="https://kit.fontawesome.com/696c0e8be2.js" crossorigin="anonymous"></script>
+     <style>
+          * {
+               box-sizing: border-box;
+               margin: 0;
+               padding: 0;
+               font-family: sans-serif;
+          }
+
+          nav {
+               margin: 10px 16px;
+               padding: 20px 40px;
+               background-color: aliceblue;
+               border-radius: 8px;
+               display: flex;
+               justify-content: space-between;
+          }
+
+          span {
+               font-size: 24px;
+               font-weight: bold;
+               letter-spacing: 4px;
+          }
+
+          ul {
+               display: flex;
+          }
+
+          li {
+               font-size: 18px;
+               letter-spacing: 0.8px;
+               margin: 0 25px;
+               list-style-type: none;
+               cursor: pointer;
+          }
+
+          i {
+               font-size: 28px;
+               display: none !important;
+               cursor: pointer;
+          }
+
+          .container {
+               text-align: right;
+          }
+
+          @media all and (max-width: 700px) {
+
+               #links {
+                    display: none;
+               }
+
+               i {
+                    display: block !important;
+               }
+
+               .change {
+                    display: block !important;
+               }
+
+               li {
+                    margin: 20px 0 0 0;
+               }
+
+          }
+     </style>
+</head>
+
+<body>
+     <nav>
+          <div>
+               <span>FANCY.</span>
+          </div>
+          <div class="container">
+               <i class="fa-solid fa-bars" id="toggle-menu" onclick="openMenu()"></i>
+               <ul id="links">
+                    <li>Home</li>
+                    <li>Service</li>
+                    <li>Price</li>
+                    <li>Contact</li>
+               </ul>
+          </div>
+     </nav>
+
+     <script>
+          function openMenu() {
+               document.getElementById("links").classList.toggle("change");
+          }
+     </script>
+</body>
+
+</html>
